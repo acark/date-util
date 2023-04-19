@@ -118,7 +118,7 @@ class DateUtil extends Date {
 
     // checks two dates are in the same month
     isSameMonth(date) {
-        
+
         if(!(date instanceof Date) || !(date instanceof DateUtil)){
             throw new Error(`${date} given date object is not valid. Please give an instance of built-in Date object or DateUtil object.`)
         }
@@ -173,12 +173,5 @@ class DateUtil extends Date {
 
 }
 
-const d = new DateUtil("1997-08-23");
-console.log(d);
 
-console.log(d instanceof Object);
-console.log(d.relativeTime("23/08/1997"))
-//const c = new Date("08/23/1997");
-//console.log(d.isSameDayWith(c))        // TODO : check isSameDayWith func... check with typeof operator 
-
-//module.exports = DateUtil;
+module.exports = DateUtil;
