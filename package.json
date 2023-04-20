@@ -1,5 +1,5 @@
 {
-  "name": "date-util",
+  "name": "datex",
   "version": "1.0.0",
   "description": "A utility class created based on the built-in javascript date object.",
   "main": "index.js",
@@ -12,7 +12,9 @@
     "utility",
     "extended",
     "date-time",
-    "entended-date"
+    "entended-date",
+    "date-x",
+    "datex"
   ],
   "author": "Kaan Acar",
   "license": "ISC"
