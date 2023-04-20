@@ -1,29 +1,29 @@
-# DateUtil
-DateUtil is a utility class that extends JavaScript's built-in Date object, providing additional methods for date manipulation and comparison. It can be used as a drop-in replacement for the native Date object.
+# Datex
+Datex is a utility class that extends JavaScript's built-in Date object, providing additional methods for date manipulation and comparison. It can be used as a drop-in replacement for the native Date object.
 
 ## Installation
 ```
-npm install date-util
+npm install datex
 ```
 
 ## Usage
 
 ```javascript
-const DateUtil = require('date-util');
+const Datex = require('datex');
 
-const d = new DateUtil();
+const d = new Datex();
 ```
 
 ## API
 
 ### Constructor
 
-- `new DateUtil(...args)`: Creates a new DateUtil object with the same arguments as the native Date constructor.
+- `new Datex(...args)`: Creates a new Datex object with the same arguments as the native Date constructor.
 
 ### Instance Methods
 
-- `startOfDay()`: Returns a new DateUtil object representing the start of the day.
-* `endOfDay()`: Returns a new DateUtil object representing the end of the day.
+- `startOfDay()`: Returns a new Datex object representing the start of the day.
+* `endOfDay()`: Returns a new Datex object representing the end of the day.
 + `isLeapYear()`: Determines whether the current year is a leap year.
 - `daysInMonth()`: Returns the number of days in the current month.
 + `isSameDayWith(date)`: Compares two dates to see if they are the same day.
@@ -47,7 +47,7 @@ const d = new DateUtil();
 ## Examples
 
 ```javascript
-const d = new DateUtil("1997-08-23");
+const d = new Datex("1997-08-23");
 
 // Check if the date is a weekend
 console.log(d.isWeekend());
