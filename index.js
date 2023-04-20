@@ -2,17 +2,17 @@
 
 
 
-class DateUtil extends Date {
+class Datex extends Date {
     constructor(...args) {
       super(...args);
     }
 
     startOfDay() {
-        return new DateUtil(this.getFullYear(), this.getMonth(), this.getDate());
+        return new Datex(this.getFullYear(), this.getMonth(), this.getDate());
     }
 
     endOfDay() {
-        return new DateUtil(this.getFullYear(), this.getMonth(), this.getDate(), 23, 59, 59, 999);
+        return new Datex(this.getFullYear(), this.getMonth(), this.getDate(), 23, 59, 59, 999);
     }
 
     
@@ -31,8 +31,8 @@ class DateUtil extends Date {
     // compares two dates 
     isSameDayWith(date) {
 
-        if(!(date instanceof Date) || !(date instanceof DateUtil)){
-            throw new Error(`${date} given date object is not valid. Please give an instance of built-in Date object or DateUtil object.`)
+        if(!(date instanceof Date) || !(date instanceof Datex)){
+            throw new Error(`${date} given date object is not valid. Please give an instance of built-in Date object or Datex object.`)
         }
 
         return this.getFullYear() === date.getFullYear() &&
@@ -42,7 +42,7 @@ class DateUtil extends Date {
     
     // returns True if the created date is today
     isToday() {
-        const today = new DateUtil();
+        const today = new Datex();
         return this.isSameDayWith(today);
     }
 
@@ -66,8 +66,8 @@ class DateUtil extends Date {
     // takes a new date as an input and returns the relative time respect to now.
     relativeTime(date) {
 
-        if(!(date instanceof Date) || !(date instanceof DateUtil)){
-            throw new Error(`${date} given date object is not valid. Please give an instance of built-in Date object or DateUtil object.`)
+        if(!(date instanceof Date) || !(date instanceof Datex)){
+            throw new Error(`${date} given date object is not valid. Please give an instance of built-in Date object or Datex object.`)
         }
 
         const now = new Date();
@@ -106,8 +106,8 @@ class DateUtil extends Date {
     // returns the difference as a day
     differenceInDays(date) {
 
-        if(!(date instanceof Date) || !(date instanceof DateUtil)){
-            throw new Error(`${date} given date object is not valid. Please give an instance of built-in Date object or DateUtil object.`)
+        if(!(date instanceof Date) || !(date instanceof Datex)){
+            throw new Error(`${date} given date object is not valid. Please give an instance of built-in Date object or Datex object.`)
         }
 
         const msPerDay = 24 * 60 * 60 * 1000;
@@ -119,8 +119,8 @@ class DateUtil extends Date {
     // checks two dates are in the same month
     isSameMonth(date) {
 
-        if(!(date instanceof Date) || !(date instanceof DateUtil)){
-            throw new Error(`${date} given date object is not valid. Please give an instance of built-in Date object or DateUtil object.`)
+        if(!(date instanceof Date) || !(date instanceof Datex)){
+            throw new Error(`${date} given date object is not valid. Please give an instance of built-in Date object or Datex object.`)
         }
 
         return this.getFullYear() === date.getFullYear() && this.getMonth() === date.getMonth();
@@ -128,45 +128,45 @@ class DateUtil extends Date {
 
     // DATE MANUPILATION
     // addMilliseconds(milliseconds) {
-    //     const result = new DateUtil(this);
+    //     const result = new Datex(this);
     //     result.setMilliseconds(this.getMilliseconds() + milliseconds);
     //     return result;
     // }
 
     addSeconds(seconds) {
-        const result = new DateUtil(this);
+        const result = new Datex(this);
         result.setSeconds(this.getSeconds() + seconds);
         return result;
     }
 
     addMinutes(minutes) {
-        const result = new DateUtil(this);
+        const result = new Datex(this);
         result.setMinutes(this.getMinutes() + minutes);
         return result;
     }
 
     addHours(hours) {
-        const result = new DateUtil(this);
+        const result = new Datex(this);
         result.setHours(this.getHours() + hours);
         return result;
     }
 
     addDays(days) {
-        const result = new DateUtil(this);
+        const result = new Datex(this);
         result.setDate(this.getDate() + days);
         return result;
     }
 
     addMonths(months) {
 
-        const result = new DateUtil(this);
+        const result = new Datex(this);
         const currentMonth = this.getMonth()
         result.setMonth(currentMonth + months);
         return result;
     } 
 
     addYears(years) {
-        const result = new DateUtil(this);
+        const result = new Datex(this);
         result.setFullYear(this.getFullYear() + years);
         return result;
     }
@@ -174,4 +174,4 @@ class DateUtil extends Date {
 }
 
 
-module.exports = DateUtil;
+module.exports = Datex;
